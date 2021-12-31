@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Slides</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <section class="slide-gallery">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+
+                <div class="slide first">
+                    <img src="assets/slideshow1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="assets/slideshow2.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="assets/slideshow3.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="assets/slideshow4.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="assets/slideshow5.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="assets/slideshow6.png" alt="">
+                </div>
+
+                <div class="auto-navigation">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    <div class="auto-btn6"></div>
+                </div>
+
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio5" class="manual-btn"></label>
+                    <label for="radio6" class="manual-btn"></label>
+                </div>
+
+                <script type="text/javascript">
+                    var counter = 1;
+                    setInterval(function() {
+                        document.getElementById('radio' + counter).checked = true;
+                        counter++;
+                        if (counter > 6) {
+                            counter = 1;
+                        }
+                    }, 5000);
+                </script>
+
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
